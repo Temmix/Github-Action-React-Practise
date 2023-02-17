@@ -25,6 +25,11 @@ steps:
 - script: npm run build
   displayName: 'Building the app'
     
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)/build'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    
 - script: |
     npm install -g netlify-cli
     netlify deploy --prod --dir '$(Build.ArtifactStagingDirectory)'
