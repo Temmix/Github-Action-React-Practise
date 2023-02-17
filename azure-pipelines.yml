@@ -24,7 +24,9 @@ steps:
 
 - script: npm run build
   displayName: 'Building the app'
-    
+
+- script: ls -a
+  displayName: 'List all the files directory'  
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(System.DefaultWorkingDirectory)/build'
