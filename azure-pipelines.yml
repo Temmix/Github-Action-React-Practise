@@ -25,4 +25,10 @@ steps:
 - script: npm run lint
   displayName: 'Linting the app'
 
-
+- script: |
+    npm install -g netlify-cli
+    netlify deploy --prod --dir '$(Build.ArtifactStagingDirectory)'
+  displayName: 'Netlify Deploy'
+  env:
+    NETLIFY_SITE_ID: $(site_id)
+    NETLIFY_AUTH_TOKEN: $(auth_token)
