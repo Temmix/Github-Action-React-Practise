@@ -1,0 +1,24 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo My first Personal Pipeline!
+  displayName: 'Run a one-line script'
+
+- script: npm ci
+  displayName: 'Install dependencies'
+
+- script: npm run lint
+  displayName: 'Linting the app'
+
+- script: npm run build
+  displayName: 'Building the app'
+
