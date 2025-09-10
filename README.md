@@ -1,6 +1,6 @@
 # Github-Action-React-Practise 
 
-Examples of GitHub Actions pipelines for React and Node.js projects.<br>
+GitHub Actions pipelines for React and Node.js projects.<br>
 Workflows cover automated testing, builds, and deployment.<br>
 <br>
 Directly secure, automated deployment of fraud-detection APIs.<br>
